@@ -1,7 +1,7 @@
 import React from "react";
 
 function App() {
-  // Common styles that can be reused
+  
   const styles = {
     container: {
       maxWidth: "1280px",

@@ -21,46 +21,16 @@ const App = () => {
           padding: "10px 0",
         }}
       >
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-          }}
-        >
-          <span
+        <img
+            src="./public/image 18.png"
+            
             style={{
-              fontWeight: "bold",
-              fontSize: "18px",
-            }}
-          >
-            THREE
-          </span>
-          <img
-            src="https://via.placeholder.com/30"
-            alt="Three Sticks Logo"
-            style={{
-              width: "30px",
-              height: "30px",
+              width: "25%",
+              height: "100%",
               margin: "0 5px",
             }}
           />
-          <span
-            style={{
-              fontWeight: "bold",
-              fontSize: "18px",
-            }}
-          >
-            STICKS
-          </span>
-          <span
-            style={{
-              fontSize: "12px",
-              marginLeft: "5px",
-            }}
-          >
-            LENDING
-          </span>
-        </div>
+        
         <div
           style={{
             textAlign: "right",
@@ -68,7 +38,7 @@ const App = () => {
         >
           <p
             style={{
-              fontSize: "14px",
+              fontSize: "16px",
               margin: "0",
             }}
           >
@@ -77,8 +47,9 @@ const App = () => {
           <a
             href="tel:8443281024"
             style={{
-              fontSize: "14px",
-              textDecoration: "underline",
+              fontSize: "16px",
+              textDecoration: "none",
+              color:"black"
             }}
           >
             (844) 328-1024
@@ -200,7 +171,7 @@ const App = () => {
             marginBottom: "10px",
           }}
         >
-          Hi [Customer Name],
+          Hi Jhon Doe,
         </p>
         <p
           style={{
@@ -249,7 +220,7 @@ const App = () => {
       >
         <h3
           style={{
-            textAlign: "center",
+            textAlign: "left",
             fontWeight: "bold",
             marginBottom: "15px",
             marginTop: "0",
