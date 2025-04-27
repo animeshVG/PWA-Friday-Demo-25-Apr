@@ -2,6 +2,7 @@ import React from "react";
 import Logo from "./assets/image 18.png";
 import banner from "./assets/Frame 26.png";
 import whiteLogo from "./assets/image 20.png";
+import QR from "./assets/QR.png"
 
 function App() {
   const styles = {
@@ -132,7 +133,7 @@ function App() {
       maxWidth: "30%",
       marginLeft: "auto",
       // height:"350px"
-      padding:"3rem 4rem"
+      padding: "3rem 4rem"
 
     },
     perksTitle: {
@@ -220,19 +221,32 @@ function App() {
               backgroundColor: "#F8F2EC",
             }}>
               {/* Pre-approval message */}
-              <div style={{ padding: "4rem", borderRadius: "0.5rem" }}>
+              <div style={{ padding: "7rem", borderRadius: "0.5rem" }}>
                 <h1 style={styles.heading}>
                   You're Pre-Approved for <span style={{ color: "black" }}>$200!</span>
                 </h1>
                 <p style={{ fontSize: "1.25rem", marginBottom: "1.5rem" }}>
                   Just Download Our New App
                 </p>
-                <button style={{
+                {/* <a href="https://delightful-rolypoly-ae41e3.netlify.app/" style={{
                   ...styles.primaryButton,
                   backgroundColor: "#ef4444",
+                  textDecoration:"none"
                 }}>
                   DOWNLOAD APP NOW
-                </button>
+                </a> */}
+                <a
+                  href="https://delightful-rolypoly-ae41e3.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    ...styles.primaryButton,
+                    backgroundColor: "#ef4444",
+                    textDecoration: "none"
+                  }}
+                >
+                  DOWNLOAD APP NOW
+                </a>
               </div>
 
               {/* QR Code */}
@@ -243,17 +257,26 @@ function App() {
                   borderRadius: "0.5rem",
                   textAlign: "center"
                 }}>
-                  <div style={{ 
-                    width: "150px", 
-                    height: "150px", 
+                  <div style={{
+                    width: "220px",
+                    height: "220px",
                     margin: "0 auto",
-                    backgroundColor: "#f0f0f0",
+                    // backgroundColor: "#f0f0f0",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
                     color: "#666"
                   }}>
-                    QR Code Placeholder
+                    <img src={QR} alt="" style={{
+                      width: "200px",
+                      height: "200px",
+                      margin: "0 auto",
+                      // backgroundColor: "#f0f0f0",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      color: "#666"
+                    }} />
                   </div>
                   <p style={{ fontSize: "0.875rem", marginTop: "0.5rem" }}>
                     To Download the App<br />
