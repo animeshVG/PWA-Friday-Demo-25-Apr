@@ -1,4 +1,6 @@
 import React from 'react'
+import QR from "./assets/Existing User Email One_.png"
+import Logo from "./assets/image 18.png"
 
 const App = () => {
   return (
@@ -22,7 +24,7 @@ const App = () => {
         }}
       >
         <img
-            src="./public/image 18.png"
+            src={Logo}
             
             style={{
               width: "25%",
@@ -104,7 +106,10 @@ const App = () => {
             <br />
             Scan the QR code to get started instantly
           </p>
-          <button
+          <a
+            href="https://tubular-meerkat-36268e.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
             style={{
               backgroundColor: "#F05E41",
               color: "white",
@@ -113,10 +118,12 @@ const App = () => {
               padding: "10px 20px",
               fontWeight: "500",
               cursor: "pointer",
+              textDecoration: "none",
+              display: "inline-block",
             }}
           >
             DOWNLOAD APP NOW
-          </button>
+          </a>
         </div>
         <div
           style={{
@@ -131,17 +138,18 @@ const App = () => {
           <div
             style={{
               backgroundColor: "white",
-              padding: "10px",
-              borderRadius: "4px",
+              padding: "15px",
+              borderRadius: "10px",
               marginBottom: "10px",
             }}
           >
             <img
-              src="https://via.placeholder.com/150"
+              src={QR}
               alt="QR Code"
               style={{
                 width: "150px",
                 height: "150px",
+
               }}
             />
           </div>
@@ -265,7 +273,10 @@ const App = () => {
       </div>
 
       {/* Bottom Button */}
-      <button
+      <a
+        href="https://tubular-meerkat-36268e.netlify.app/"
+        target="_blank"
+        rel="noopener noreferrer"
         style={{
           backgroundColor: "#F05E41",
           color: "white",
@@ -274,12 +285,14 @@ const App = () => {
           padding: "10px 20px",
           fontWeight: "500",
           cursor: "pointer",
-          width: "220px",
+          textDecoration: "none",
+          display: "inline-block",
+          width: "180px",
           marginBottom: "30px",
         }}
       >
         DOWNLOAD APP NOW
-      </button>
+      </a>
     </div>
   )
 }

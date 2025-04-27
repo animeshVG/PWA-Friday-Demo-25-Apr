@@ -1,10 +1,17 @@
 import React from "react";
+import Logo from "./assets/image 18.png";
+import banner from "./assets/Frame 26.png";
+import whiteLogo from "./assets/image 20.png";
 
 function App() {
-
   const styles = {
     container: {
       maxWidth: "100%",
+      margin: "0 auto",
+      padding: "0 1rem",
+    },
+    containersecondary: {
+      maxWidth: "92%",
       margin: "0 auto",
       padding: "0 1rem",
     },
@@ -55,11 +62,119 @@ function App() {
       fontWeight: "700",
       marginBottom: "1rem",
     },
-    containersecondary: {
-      maxWidth: "92%",
+    loanProcessSection: {
+      padding: "3rem 12px",
+      backgroundColor: "#f8f8f8",
+    },
+    loanProcessContainer: {
+      display: "flex",
+      justifyContent: "space-between",
+      gap: "200px",
+      // maxWidth: "1200px",
       margin: "0 auto",
-      padding: "0 1rem",
-    }
+      padding: "0 12px",
+      width: "100%",
+      // backgroundColor:"red"
+      // paddingRight:"70px"
+    },
+    loanProcessText: {
+      flex: 1,
+      maxWidth: "50%",
+      padding: "0 12px"
+    },
+    sectionTitle: {
+      fontSize: "1.75rem",
+      fontWeight: "600",
+      marginBottom: "1.5rem",
+      color: "#333",
+    },
+    sectionDescription: {
+      fontSize: "1rem",
+      lineHeight: "1.6",
+      color: "#666",
+      marginBottom: "2rem",
+    },
+    steps: {
+      display: "flex",
+      flexDirection: "column",
+      gap: "1.5rem",
+      marginBottom: "2rem",
+    },
+    step: {
+      display: "flex",
+      alignItems: "flex-start",
+      gap: "1rem",
+    },
+    stepNumber: {
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      width: "2rem",
+      height: "2rem",
+      borderRadius: "50%",
+      backgroundColor: "#023246",
+      color: "white",
+      fontWeight: "bold",
+      fontSize: "1rem",
+      flexShrink: 0,
+    },
+    stepText: {
+      fontSize: "1rem",
+      margin: 0,
+      lineHeight: "1.5",
+    },
+    loanPerksContainer: {
+      backgroundColor: "#023246",
+      color: "white",
+      // padding: "2rem",
+      borderRadius: "0.5rem",
+      flex: 1,
+      maxWidth: "30%",
+      marginLeft: "auto",
+      // height:"350px"
+      padding:"3rem 4rem"
+
+    },
+    perksTitle: {
+      color: "#e87722",
+      fontSize: "1.125rem",
+      fontWeight: "bold",
+      textAlign: "center",
+      marginBottom: "1.5rem",
+    },
+    perkItem: {
+      display: "flex",
+      alignItems: "center",
+      gap: "1rem",
+      padding: "1rem 0",
+      borderBottom: "1px solid rgba(255,255,255,0.1)",
+    },
+    perkIcon: {
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      width: "1.5rem",
+      height: "1.5rem",
+      borderRadius: "50%",
+      backgroundColor: "#e87722",
+      color: "white",
+      fontWeight: "bold",
+      fontSize: "1rem",
+    },
+    perkText: {
+      fontSize: "1rem",
+      margin: 0,
+    },
+    getStartedButton: {
+      backgroundColor: "#e87722",
+      color: "white",
+      borderRadius: "0.25rem",
+      padding: "0.75rem 2rem",
+      fontSize: "0.875rem",
+      fontWeight: "500",
+      border: "none",
+      cursor: "pointer",
+    },
   };
 
   return (
@@ -68,8 +183,8 @@ function App() {
       <header style={{ borderBottom: "1px solid #e5e7eb", backgroundColor: "white" }}>
         <div style={{ ...styles.container, display: "flex", alignItems: "center", justifyContent: "space-between", padding: "1rem" }}>
           {/* Logo */}
-          <div href="/" style={{ display: "flex", alignItems: "center" }}>
-            <img src="./public/image 18.png" alt="Three Sticks Lending" style={{ height: "auto", width: "180px" }} />
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <img src={Logo} alt="Three Sticks Lending" style={{ height: "auto", width: "180px" }} />
           </div>
 
           {/* Navigation */}
@@ -93,33 +208,19 @@ function App() {
 
       <main style={{ flex: "1" }}>
         {/* Hero Section */}
-        <section style={{
-          position: "relative",
-          backgroundPosition: "center",
-          
-        }}>
-
+        <section>
           <div style={styles.container}>
-            <div >
-              <img src="./public/Frame 26.png" style={{
-                width: "100%"
-              }} />
+            <div>
+              <img src={banner} alt="Banner" style={{ width: "100%" }} />
             </div>
             <div style={{
               display: "grid",
               gridTemplateColumns: "1fr 1fr",
               alignItems: "center",
               backgroundColor: "#F8F2EC",
-
-              "@media (max-width: 768px)": {
-                gridTemplateColumns: "1fr"
-              }
             }}>
               {/* Pre-approval message */}
-              <div style={{
-                padding: "4rem",
-                borderRadius: "0.5rem"
-              }}>
+              <div style={{ padding: "4rem", borderRadius: "0.5rem" }}>
                 <h1 style={styles.heading}>
                   You're Pre-Approved for <span style={{ color: "black" }}>$200!</span>
                 </h1>
@@ -127,14 +228,8 @@ function App() {
                   Just Download Our New App
                 </p>
                 <button style={{
+                  ...styles.primaryButton,
                   backgroundColor: "#ef4444",
-                  color: "white",
-                  borderRadius: "0.25rem",
-                  padding: "0.75rem 1.5rem",
-                  fontSize: "0.875rem",
-                  fontWeight: "500",
-                  border: "none",
-                  cursor: "pointer"
                 }}>
                   DOWNLOAD APP NOW
                 </button>
@@ -148,11 +243,18 @@ function App() {
                   borderRadius: "0.5rem",
                   textAlign: "center"
                 }}>
-                  <img
-                    src="/qr-code.png"
-                    alt="QR Code"
-                    style={{ width: "150px", height: "150px", margin: "0 auto" }}
-                  />
+                  <div style={{ 
+                    width: "150px", 
+                    height: "150px", 
+                    margin: "0 auto",
+                    backgroundColor: "#f0f0f0",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    color: "#666"
+                  }}>
+                    QR Code Placeholder
+                  </div>
                   <p style={{ fontSize: "0.875rem", marginTop: "0.5rem" }}>
                     To Download the App<br />
                     Scan this QR Code
@@ -162,60 +264,67 @@ function App() {
             </div>
           </div>
         </section>
-      </main>
 
-
-      <section style={{
-        height: "30vh", // 30% of viewport height
-        width: "100%",
-        // backgroundColor: "red", // Matching your existing color scheme
-        padding: "2rem 0"
-      }}>
-        <div style={styles.containersecondary}>
-          <div style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gap: "2rem",
-            height: "100%",
-            alignItems: "center"
-          }}>
-            {/* Left content */}
-            <div>
-              <h2 style={styles.subheading}>Get up to $3000 as soon as today</h2>
-              <p style={styles.paragraph}>
-                We provide fast, reliable lending solutions tailored to your needs.
-                Our process is simple, transparent, and customer-focused.
+        {/* Loan Process Section */}
+        <section style={styles.loanProcessSection}>
+          <div style={styles.loanProcessContainer}>
+            <div style={styles.loanProcessText}>
+              <h2 style={styles.sectionTitle}>Get up to $3000 as soon as today*</h2>
+              <p style={styles.sectionDescription}>
+                Our loan process is fast and effortless, and you can be approved in minutes. Just follow the steps below:
               </p>
-              <button style={styles.primaryButton}>LEARN MORE</button>
+
+              <div style={styles.steps}>
+                <div style={styles.step}>
+                  <div style={styles.stepNumber}>1</div>
+                  <p style={styles.stepText}>Fill out our secure online loan application.</p>
+                </div>
+
+                <div style={styles.step}>
+                  <div style={styles.stepNumber}>2</div>
+                  <p style={styles.stepText}>Receive your approval status and review your documents.</p>
+                </div>
+
+                <div style={styles.step}>
+                  <div style={styles.stepNumber}>3</div>
+                  <p style={styles.stepText}>Finalize your loan by 2:00p.m. CT and get your funds that same day.*</p>
+                </div>
+              </div>
+
+              <button style={styles.getStartedButton}>GET STARTED NOW</button>
             </div>
 
-            {/* Right content - could be an image or features list */}
-            <div style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "1rem",
-              backgroundColor:"blue",
-            }}>
-              <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-                <CheckCircleIcon color="#e87722" />
-                <span>Quick approval process</span>
-              </div>
-              <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-                <CheckCircleIcon color="#e87722" />
-                <span>Competitive rates</span>
-              </div>
-              <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-                <CheckCircleIcon color="#e87722" />
-                <span>24/7 customer support</span>
+            <div style={styles.loanPerksContainer}>
+              <div>
+                <h3 style={styles.perksTitle}>THREE STICKS LENDING OFFERS INSTALLMENT LOANS WITH PERKS:</h3>
+
+                <div style={styles.perkItem}>
+                  <div style={styles.perkIcon}>✓</div>
+                  <p style={styles.perkText}>An effortless, secure online process</p>
+                </div>
+
+                <div style={styles.perkItem}>
+                  <div style={styles.perkIcon}>✓</div>
+                  <p style={styles.perkText}>No hidden fees</p>
+                </div>
+
+                <div style={styles.perkItem}>
+                  <div style={styles.perkIcon}>✓</div>
+                  <p style={styles.perkText}>No prepayment penalty</p>
+                </div>
+
+                <div style={styles.perkItem}>
+                  <div style={styles.perkIcon}>✓</div>
+                  <p style={styles.perkText}>Three Sticks VIP Rewards</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
+        </section>
+      </main>
 
       {/* Footer */}
-      <footer style={{ backgroundColor: "#0a2240", color: "white", padding: "3rem 0" }}>
+      <footer style={{ backgroundColor: "#023246", color: "white", padding: "3rem 0" }}>
         <div style={styles.container}>
           <div style={{
             display: "grid",
@@ -225,7 +334,7 @@ function App() {
             {/* Logo */}
             <div>
               <img
-                src="/public/image 20.png"
+                src={whiteLogo}
                 alt="Three Sticks Lending"
                 style={{ width: "210px", height: "auto", marginBottom: "1rem" }}
               />
@@ -280,25 +389,6 @@ function App() {
 }
 
 // Helper Components
-function CheckCircleIcon({ color = "currentColor" }) {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke={color}
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-      <polyline points="22 4 12 14.01 9 11.01" />
-    </svg>
-  );
-}
-
 function PhoneIcon() {
   return (
     <svg
@@ -334,4 +424,3 @@ function FooterLink({ href, text }) {
 }
 
 export default App;
-
