@@ -1,5 +1,5 @@
 import React from 'react'
-import QR from "./assets/Existing User Email One_.png"
+import QR from "./assets/Existing-user.png"
 import Logo from "./assets/image 18.png"
 
 const App = () => {
@@ -107,7 +107,7 @@ const App = () => {
             Scan the QR code to get started instantly
           </p>
           <a
-            href="https://tubular-meerkat-36268e.netlify.app/"
+            href="https://luminous-tarsier-e17b79.netlify.app/"
             target="_blank"
             rel="noopener noreferrer"
             style={{
@@ -274,7 +274,7 @@ const App = () => {
 
       {/* Bottom Button */}
       <a
-        href="https://tubular-meerkat-36268e.netlify.app/"
+        href="https://luminous-tarsier-e17b79.netlify.app/"
         target="_blank"
         rel="noopener noreferrer"
         style={{

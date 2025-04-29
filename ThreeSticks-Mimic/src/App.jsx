@@ -236,7 +236,7 @@ function App() {
                   DOWNLOAD APP NOW
                 </a> */}
                 <a
-                  href="https://delightful-rolypoly-ae41e3.netlify.app/"
+                  href="https://serene-mousse-3990fd.netlify.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{
